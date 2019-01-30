@@ -31,6 +31,17 @@ In the Main (`org.hda.gaf.Main`) there are several settings you can modify/comme
 * Print while generating:
     Activates a GUI displaying the currently best found protein and some stats. For better performance deactivate it.
 
+### Generate jar
+You can package this project via maven:\
+`mvn clean package`
+The jar should then be available at \
+`target/genetic-algorithm-protein-folding-1.0-SNAPSHOT-jar-with-dependencies.jar`
+
+
+### Execute
+You can either execute this program using an IDE like IntelliJ or you can execute it via maven:\
+`java -jar target/genetic-algorithm-protein-folding-1.0-SNAPSHOT-jar-with-dependencies.jar`
+
 ## Other projects
 The project was also implemented using different parallel computing technologies:
 
@@ -44,3 +55,7 @@ MPJ is a java implementation of MPI (Message Passing Interface).
 It can be used to distribute the computing workload on a Cluster with multiple CPU's. 
 Part of the generated population is shared with other MPJ processes to allow for more variety. \
 https://github.com/MPritsch/genetic-algorithm-protein-folding-mpj
+
+### Known Issues
+* There seems to be a bug with the graphic output which sometimes fails on startup.
+    The current workaround is to just restart the program until it properly works.
